@@ -7,13 +7,36 @@ document.addEventListener('DOMContentLoaded', function() {
     if (loadButton) {
         loadButton.addEventListener('click', function() {
             // Создаём iframe с YouTube-видео (можно заменить на своё)
-            const iframe = document.createElement('iframe');
-            iframe.width = "100%";
-            iframe.height = "100%";
-            iframe.src = "https://www.youtube.com/embed/Rf6gEn02iVY?autoplay=1&rel=0";
-            iframe.title = "Видео-презентация AR-BLOCK";
-            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-            iframe.allowFullscreen = true;
+document.addEventListener('DOMContentLoaded', function() {
+    const loadBtn = document.getElementById('loadVideoBtn');
+    const placeholder = document.getElementById('videoPlaceholder');
+    const videoWrapper = document.getElementById('videoWrapper');
+
+    loadBtn.addEventListener('click', function() {
+        // Скрываем блок‑заполнитель
+        placeholder.style.display = 'none';
+
+        // Показываем контейнер для видео
+        videoWrapper.style.display = 'block';
+
+        // Создаём iframe с YouTube‑видео
+        const iframe = document.createElement('iframe');
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.src = 'https://www.youtube.com/embed/Rf6gEn02iVY?autoplay=1&rel=0';
+        iframe.title = 'Видео-презентация AR-BLOCK';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.frameBorder = '0'; // Убираем рамку
+
+        // Добавляем класс для стилизации
+        iframe.classList.add('youtube-video');
+
+        // Вставляем iframe в контейнер
+        videoWrapper.appendChild(iframe);
+    });
+});
+
             
             // Очищаем wrapper и добавляем iframe
             videoWrapper.innerHTML = '';
