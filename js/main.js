@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const iframe = document.createElement('iframe');
             iframe.width = "100%";
             iframe.height = "100%";
-            iframe.src = "https://youtu.be/Rf6gEn02iVY?autoplay=1&rel=0";
+            iframe.src = "https://www.youtube.com/embed/Rf6gEn02iVY?autoplay=1&rel=0";
             iframe.title = "Видео-презентация AR-BLOCK";
             iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
             iframe.allowFullscreen = true;
